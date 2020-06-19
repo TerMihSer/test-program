@@ -1,0 +1,7 @@
+.messages__message {
+    margin: 10px 0 10px 25px;
+}
+
+.messages__reply {
+    display: none;
+}
