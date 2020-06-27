@@ -22,3 +22,6 @@ modules/messages/models/MessagesForm.php - форма
 modules/messages/models/MessagesFormat.php - модель форматирования, строит дерево из комментариев  
 modules/messages/models/MessagesRepository.php - работает с базой данных.  
 Html дерево строится в виджете модуля modules/messages/widgets/Messages.php
+
+● Скриншот результата работы приложения
+![Иллюстрация к проекту](screenshots/result.jpg)
