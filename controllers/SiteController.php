@@ -9,7 +9,6 @@ use app\modules\messages\models\MessagesFormat;
 use yii\web\Controller;
 
 
-
 class SiteController extends Controller
 {
     /**
@@ -19,7 +18,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $messages = new Messages(new MessagesRepository(), new MessagesFormat());
+        $messages = \Yii::createObject([
+            'class' => Messages::class
+        ], [new MessagesRepository, new MessagesFormat]);
         $arrayMessagesTree = $messages->showMessages();
         return $this->render('index', ["modelMessagesForm" => new MessagesForm(), "messages" => $arrayMessagesTree]);
     }

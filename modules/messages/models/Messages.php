@@ -9,14 +9,14 @@ use yii\db\ActiveRecord;
 
 class Messages extends Model
 {
-    public $repository;
-    public $format;
+    private $repository;
+    private $format;
 
     public function __construct(ActiveRecord $repository, Model $format, $config = [])
     {
-        parent::__construct($config);
         $this->repository = $repository;
         $this->format = $format;
+        parent::__construct($config);
     }
 
     /**
